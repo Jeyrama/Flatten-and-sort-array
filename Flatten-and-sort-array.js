@@ -19,3 +19,13 @@ function flattenAndSort(array) {
 }
 
 // or
+
+function flattenAndSort(array) {
+  return flatten(array).sort((a, b) => a - b);
+}
+
+function flatten(array) {
+  return array.reduce(function(acc, el) {
+    return acc.concat(Array.isArray(el) ? flatten(el) : el);
+  }, []);
+}
