@@ -17,3 +17,5 @@ function flattenAndSort(array) {
     .sort((a, b) => a - b)
     ;
 }
+
+// or
